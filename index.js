@@ -218,10 +218,10 @@ class Student extends Lambdasian {
   //stretch
   graduate() {
     if (this.grade > 70) {
-      return `${this.name} can graduate! Their grade is a ${this.grade}`
+      return `${this.name} can graduate! Their grade is a ${this.grade}`;
     }
     else {
-      return `${this.name} cannot graduate yet, their grade isn't high enough!`
+      return `${this.name} cannot graduate yet, their grade isn't high enough!`;
     }
   }
 }
