@@ -163,6 +163,11 @@ class Instructor extends Lambdasian{
   grade(studentObj, subject) {
     return `${studentObj.name} receives a perfect score on ${subject}`;
   }
+
+  //stretch goals 
+  changeGrade(studentObj) {
+    studentObj.grade += Math.floor(Math.random() * 10) - 5; //between -5 to 5
+  }
 }
 
 /*
@@ -187,6 +192,9 @@ class Student extends Lambdasian {
     this.previousBackground = object.previousBackground;
     this.className = object.className;
     this.favSubjects = object.favSubjects;
+
+    //stretch
+    this.grade = 100;
   }
 
   listSubjects() {
@@ -206,6 +214,16 @@ class Student extends Lambdasian {
     return `${this.name} has begun spring challenge on ${subject}`;
   }
 
+
+  //stretch
+  graduate() {
+    if (this.grade > 70) {
+      return `${this.name} can graduate! Their grade is a ${this.grade}`
+    }
+    else {
+      return `${this.name} cannot graduate yet, their grade isn't high enough!`
+    }
+  }
 }
 
 /*
